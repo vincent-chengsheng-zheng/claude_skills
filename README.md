@@ -7,6 +7,7 @@ A personal collection of Claude Code skills for academic / research workflows. E
 | Skill | Triggers when... |
 |---|---|
 | [`literature-scan/`](./literature-scan/) | Doing a lit review, finding related papers, checking novelty, verifying citations resolve, auditing an existing scan. |
+| [`paper-reading/`](./paper-reading/) | Reading a paper that's slow / dense / unfocused (ADHD, non-native English, dense subfield). Claude asks narrow-range questions in chat; user hunts in the PDF; Claude logs progress to disk. |
 
 (Add more skills here as they accumulate.)
 
