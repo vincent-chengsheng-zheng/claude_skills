@@ -13,23 +13,23 @@ A personal collection of Claude Code skills for academic / research workflows. E
 
 ## How to install on a new machine
 
-A Claude Code skill lives at a path that Claude knows to look in. There are three ways to wire this repo up:
-
-### Option A — Symlink each skill into `~/.claude/skills/` (simplest, personal use)
-
 ```bash
-# Clone the repo somewhere durable
 cd ~/Code
-git clone <your-github-url> research-skills
-
-# Make sure the skills dir exists
-mkdir -p ~/.claude/skills
-
-# Link each skill
-ln -s ~/Code/research-skills/literature-scan ~/.claude/skills/literature-scan
+git clone https://github.com/vincent-chengsheng-zheng/claude_skills.git research-skills
+bash research-skills/setup.sh
 ```
 
-Restart Claude Code (or open a new session). The skill should appear in the available-skills list when its trigger phrases come up.
+Restart Claude Code (or open a new session). Skills activate automatically when their trigger phrases come up in any project folder.
+
+`setup.sh` symlinks every skill directory that contains a `SKILL.md` into `~/.claude/skills/` — re-run it whenever you add a new skill to the repo.
+
+### Manual option (if you prefer not to run a script)
+
+```bash
+mkdir -p ~/.claude/skills
+ln -sfn ~/Code/research-skills/literature-scan ~/.claude/skills/literature-scan
+ln -sfn ~/Code/research-skills/paper-reading   ~/.claude/skills/paper-reading
+```
 
 ### Option B — Package as a Claude Code plugin (sharing with others)
 
